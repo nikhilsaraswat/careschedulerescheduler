@@ -12,10 +12,10 @@ import {
   PersonButton,
 } from "../styledComponent/index";
 
-function ReplaceModal(props) {
+function ReplaceModal3(props) {
   const { register, handleSubmit } = useForm();
   const dispatch = useDispatch();
-  const textName = ["hea5", "hea9", "hea13", "hea14", "hea20"];
+  const textName = ["edu4", "edu8", "edu12", "edu15", "edu18"];
   //   const onSubmit = (data) => {};
   const { replacePerson } = bindActionCreators(actionCreators, dispatch);
 
@@ -25,18 +25,18 @@ function ReplaceModal(props) {
       replacePerson: props.replacePerson,
       replaceWith,
     });
-    props.closeModal();
+    props.closeModal3();
   };
 
   return (
     <Modal
-      isOpen={props.modalState}
+      isOpen={props.modalState3}
       ariaHideApp={false}
-      onRequestClose={props.closeModal}
+      onRequestClose={props.closeModal3}
       style={customStyles}
       contentLabel="Example Modal"
     >
-      <ModalHeader>Replace hea1 with</ModalHeader>
+      <ModalHeader>replace edu1 with</ModalHeader>
       {/* <form onSubmit={handleSubmit(onSubmit)}> */}
       <ModalBody>
         <div
@@ -65,4 +65,4 @@ function ReplaceModal(props) {
   );
 }
 
-export default ReplaceModal;
+export default ReplaceModal3;

@@ -15,7 +15,7 @@ import {
 function ReplaceModal(props) {
   const { register, handleSubmit } = useForm();
   const dispatch = useDispatch();
-  const textName = ["hea5", "hea9", "hea13", "hea14", "hea20"];
+  const textName = ["soc3", "soc6", "soc13", "soc19", "soc20"];
   //   const onSubmit = (data) => {};
   const { replacePerson } = bindActionCreators(actionCreators, dispatch);
 
@@ -25,18 +25,18 @@ function ReplaceModal(props) {
       replacePerson: props.replacePerson,
       replaceWith,
     });
-    props.closeModal();
+    props.closeModal2();
   };
 
   return (
     <Modal
-      isOpen={props.modalState}
+      isOpen={props.modalState2}
       ariaHideApp={false}
-      onRequestClose={props.closeModal}
+      onRequestClose={props.closeModal2}
       style={customStyles}
       contentLabel="Example Modal"
     >
-      <ModalHeader>Replace hea1 with</ModalHeader>
+      <ModalHeader>replace soc1 with</ModalHeader>
       {/* <form onSubmit={handleSubmit(onSubmit)}> */}
       <ModalBody>
         <div

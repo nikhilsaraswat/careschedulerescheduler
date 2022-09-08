@@ -46,19 +46,19 @@ function FormModal(props) {
       <form onSubmit={handleSubmit(onSubmit)}>
         <ModalBody>
           <InputContainer>
-            <InputSpan>Person1:</InputSpan>
+            <InputSpan>Health:</InputSpan>
             <InputField {...register("p1")}></InputField>
           </InputContainer>
           <InputContainer>
-            <InputSpan>Person2:</InputSpan>
+            <InputSpan>Social:</InputSpan>
             <InputField {...register("p2")}></InputField>
           </InputContainer>
           <InputContainer>
-            <InputSpan>Person3:</InputSpan>
+            <InputSpan>Educational:</InputSpan>
             <InputField {...register("p3")}></InputField>
           </InputContainer>
           <InputContainer>
-            <InputSpan>Person4:</InputSpan>
+            <InputSpan>CYP:</InputSpan>
             <InputField {...register("p4")}></InputField>
           </InputContainer>
           <InputContainer>

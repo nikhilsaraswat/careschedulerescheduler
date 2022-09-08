@@ -26,14 +26,14 @@ function InformationModal(props) {
       <ModalHeader></ModalHeader>
 
       <TextButtonContainer>
-        <p>Text-a</p>
+        <p>Edu-CYP-EHCP-11:30-04092022</p>
         <IconSpan>
           <AiOutlineCheck />
         </IconSpan>
       </TextButtonContainer>
       <hr />
       <TextButtonContainer>
-        <p>Text-b</p>
+        <p>Social-CYP-EHCP-13:30-05092022</p>
         <IconSpan>
           <AiOutlineClose />
         </IconSpan>

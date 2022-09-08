@@ -10,16 +10,32 @@ import {
   PersonButton,
 } from "../styledComponent/index";
 import ReplaceModal from "./ReplaceModal";
-
+import ReplaceModal2 from "./ReplaceModal2";
+import ReplaceModal3 from "./ReplaceModal3";
 function RescheduleModal(props) {
   // console.log("reschedule modal", props.data);
   const { register, handleSubmit } = useForm();
   const { p1, p2, p3, p4 } = props.data.data;
   const { id } = props.data;
   const [openModal, setOpenModal] = React.useState(false);
+  const [openModal2, setOpenModal2] = React.useState(false);
+  const [openModal3, setOpenModal3] = React.useState(false);
+  const [openModal4, setOpenModal4] = React.useState(false);
   const [replacePerson, setReplacePerson] = React.useState(null);
   const closeModal = () => {
     setOpenModal(false);
+    props.closeModal();
+  };
+  const closeModal2 = () => {
+    setOpenModal2(false);
+    props.closeModal();
+  };
+  const closeModal3 = () => {
+    setOpenModal3(false);
+    props.closeModal();
+  };
+  const closeModal4 = () => {
+    setOpenModal4(false);
     props.closeModal();
   };
   const onSubmit = (data) => {};
@@ -27,6 +43,19 @@ function RescheduleModal(props) {
   const clickHandler = (person) => {
     setReplacePerson(person);
     setOpenModal(true);
+  };
+  const clickHandler2 = (person) => {
+    setReplacePerson(person);
+    setOpenModal2(true);
+  };
+  const clickHandler3 = (person) => {
+    setReplacePerson(person);
+    setOpenModal3(true);
+  };
+  const clickHandler4 = (person) => {
+    setReplacePerson(person);
+    setOpenModal4(true);
+    console.log("4")
   };
   return (
     <Modal
@@ -49,10 +78,10 @@ function RescheduleModal(props) {
             }}
           >
             <PersonButton onClick={() => clickHandler(p1)}>{p1}</PersonButton>
-            <PersonButton onClick={() => clickHandler(p2)}>{p2}</PersonButton>
-            <PersonButton onClick={() => clickHandler(p3)}>{p3}</PersonButton>
-            <PersonButton onClick={() => clickHandler(p4)}>{p4}</PersonButton>
+            <PersonButton onClick={() => clickHandler2(p2)}>{p2}</PersonButton>
+            <PersonButton onClick={() => clickHandler3(p3)}>{p3}</PersonButton>
           </div>
+
           {/* setOpenModal(true) */}
         </ModalBody>
         <ModalFooter>
@@ -66,6 +95,18 @@ function RescheduleModal(props) {
         replacePerson={replacePerson}
         apnId={id}
         closeModal={closeModal}
+      />
+      <ReplaceModal2
+        modalState2={openModal2}
+        replacePerson={replacePerson}
+        apnId={id}
+        closeModal2={closeModal2}
+      />
+      <ReplaceModal3
+        modalState3={openModal3}
+        replacePerson={replacePerson}
+        apnId={id}
+        closeModal3={closeModal3}
       />
     </Modal>
   );
